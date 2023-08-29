@@ -32,7 +32,7 @@ const Footer = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post(
+      await axios.post(
         `https://api.convertkit.com/v3/forms/${FORM_ID}/subscribe`,
         {
           api_key: API_KEY,
@@ -61,8 +61,8 @@ const Footer = () => {
   return (
     <footer className="px-4  bg-slate-900 text-white">
       <div className="mt-6 pt-6 flex ">
-        <div class="mb-4 ">
-          <h2 class="text-xl font-bold text-slate-100">
+        <div className="mb-4 ">
+          <h2 className="text-xl font-bold text-slate-100">
             Subscribe to our newsletter!
           </h2>
         </div>
